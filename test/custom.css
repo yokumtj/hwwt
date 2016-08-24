@@ -1,0 +1,48 @@
+        html {
+                position: relative;
+                min-height: 100%;
+            }
+
+        body {
+            padding-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        .start-template > h1 {
+            font-family: 'Pacifico', cursive;
+        }
+
+        .navbar {
+            background-color: rgb(96, 0, 26);
+        }
+
+        .nav > li.active {
+            background-color: rgb(96, 0, 26);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            background-color: #f5f5f5;
+        }
+
+        @media (max-width: 1200px) {
+            .sellers {
+                margin-left: 23.3333334% !important;
+                margin-right: 30.333334%;
+            }
+        }
+
+        #myCarousel img {
+            max-height: 400px;
+            width: auto;
+            margin: 0 auto;
+        }
