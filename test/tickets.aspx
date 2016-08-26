@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="cart.aspx.vb" Inherits="test.cart" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="tickets.aspx.vb" Inherits="test.tickets" %>
 
 <!DOCTYPE html>
 
@@ -27,13 +27,21 @@
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="Default.aspx">Home</a></li>
-                    <li><a href="tickets.aspx">Tickets</a></li>
-                    <li class="active" style="background-color: maroon;color: white;"><a href="#" style="background-color:maroon;">Cart</a></li>
+                    <li class="active"><a href="#about" style="background-color: maroon;color: white;">Tickets</a></li>
+                    <li><a href="cart.aspx">Cart</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
     </nav>
+    <div class="col-lg-5 text-center" id="privacy" style="margin:0 auto;float:none;">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: rgb(96, 0, 26); color:white;">&ndash;Tickets&ndash;</div>
+            <div class="panel-body text-center">
+                    <img src="tickets.gif" style="transform: scale(0.75, 0.75);"/>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
         <div class="container text-center" style="padding-top: 20px;">
             <p class="text-muted">

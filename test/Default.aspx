@@ -10,8 +10,14 @@
     <link href="custom.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" />
 </head>
 <body>
+    <div class="fullscreen-bg">
+    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+        <source src="pour2.webm" type="video/webm" />
+    </video>
+</div>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,12 +27,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="color: white; font-family: 'Abril Fatface', cursive; font-size: 20px;">Hopewell Wine Tasting</a>
+                <a class="navbar-brand" href="#" style="color: white; font-family: 'Dancing Script', cursive; font-size: 28px;">Hopewell Wine Tasting</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
                     <li class="active" style="background-color: rgb(96, 0, 22);"><a href="#" style="background-color: maroon;">Home</a></li>
-                    <li><a href="#about">Tickets</a></li>
+                    <li><a href="tickets.aspx">Tickets</a></li>
                     <li><a href="cart.aspx">Cart</a></li>
                 </ul>
             </div>
@@ -56,34 +62,34 @@
                     $PauseOnHover: 4,
                     $SlideWidth: 170,
                     $Cols: 5,
-                    $SlideSpacing: 10
+                    $SlideSpacing: 15
                 };
 
                 var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
 
                 //responsive code begin
                 //you can remove responsive code if you don't want the slider scales while window resizing
-                function ScaleSlider() {
-                    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                    if (refSize) {
-                        refSize = Math.min(refSize, 809);
-                        jssor_1_slider.$ScaleWidth(refSize);
-                    }
-                    else {
-                        window.setTimeout(ScaleSlider, 30);
-                    }
-                }
-                ScaleSlider();
-                $Jssor$.$AddEvent(window, "load", ScaleSlider);
-                $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-                $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                //function ScaleSlider() {
+                //    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                //    if (refSize) {
+                //        refSize = Math.min(refSize, 809);
+                //        jssor_1_slider.$ScaleWidth(refSize);
+                //    }
+                //    else {
+                //        window.setTimeout(ScaleSlider, 30);
+                //    }
+                //}
+                //ScaleSlider();
+                //$Jssor$.$AddEvent(window, "load", ScaleSlider);
+                //$Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                //$Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
                 //responsive code end
             };
         </script>
 
 
-        <div id="scroller" style="width: 740px;height: 170px;background-color:maroon;margin:0 auto;overflow:visible;">
-            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 15px; left: 0px; width: 780px; height: 150px; overflow: hidden; visibility: hidden;">
+        <div id="scroller" style="width: 800px;height: 170px;background-color:maroon;margin:0 auto;overflow:visible;">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 10px; left: 0px; width: 780px; height: 150px; overflow: hidden; visibility: hidden;">
             <!-- Loading Screen -->
             <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
                 <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
@@ -131,53 +137,6 @@
             </div>
         </div>
         </div>
-        <%--<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 780px; height: 150px; overflow: hidden; visibility: hidden;">
-            <!-- Loading Screen -->
-            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                <div style="position: absolute; display: block; background: url('/theme/img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-            </div>
-            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 780px; height: 150px; overflow: hidden;">
-                <div style="display: none;">
-                    <a href="http://www.jamesrivercellars.com/"><img data-u="image" src="winery/JamesRiver.jpg" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="bottles" src="img/bottles.jpg" />
-                </div>
-                <div style="display: none;">
-                    <a href="http://mattaponiwinery.com/"><img data-u="image" src="winery/MattaponiWinery.jpg" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="glasses" src="img/glasses.jpg" />
-                </div>
-                <div style="display: none;">
-                    <a href="http://elkislandwinery.com/"><img data-u="image" src="winery/ElkIsland.jpg" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="bottles2" src="img/bottles2.jpg" />
-                </div>
-                <div style="display: none;">
-                    <a href="http://westonfarmvineyardandwinery.webs.com/"><img data-u="image" src="winery/WestonFarm.gif" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="party" src="img/wineparty.jpg" />
-                </div>
-                <div style="display: none;">
-                    <a href="http://www.byrdcellars.com/"><img data-u="image" src="winery/ByrdCellars.jpg" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="outside" src="img/outside.jpg" />
-                </div>
-                <div style="display: none;">
-                    <a href="http://www.coopervineyards.com/"><img data-u="image" src="winery/CooperLogo.png" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="tasting" src="img/tasting.jpg" />
-                </div>
-                <a data-u="add" href="http://www.jssor.com/demos/scrolling-logo-thumbnail-slider.slider" style="display: none">Scrolling Logo Thumbnail Slider</a>
-
-            </div>
-        </div>--%>
         <script>
             jssor_1_slider_init();
         </script>
@@ -185,7 +144,7 @@
         <div class="container"><!-- Main content -->
             <div class="starter-template">
                 <a href="http://www.hopewellkiwanis.com">
-                    <img src="kiwanis.jpg" />
+                    <img src="kiwanis.png" style="width:274px;height:184px;"/>
                 </a>
                 <h1 style="font-family: 'Pacifico', cursive;">Kiwanis Club Wine Tasting</h1>
                 <p class="lead">The Hopewell Kiwanis Club invites you to its annual Wine Tasting Festival, November 19, 2016.</p>
@@ -255,13 +214,12 @@
         </div>
     </div>
     <br />
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog" style="">
   <div class="modal-dialog" id="modaldialog">
     <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-body">
+        <div class="modal-body" style="background-color: rgb(96, 0, 26);">
             <img data-u="image" id="modalimage" src="img/outside.jpg" />
         </div>
       </div>
