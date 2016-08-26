@@ -114,3 +114,11 @@
     display: none;
   }
 }
+.cartwrapper {
+    width: 200px;
+    clear: both;
+}
+.cartwrapper input {
+    width: 100%;
+    clear: both;
+}
