@@ -8,6 +8,8 @@
     <link href="bootstrap.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
     <link href="custom.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -22,10 +24,10 @@
                 <a class="navbar-brand" href="Default.aspx" style="color: white;">Hopewell Wine Tasting</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active" style="background-color: rgb(96, 0, 22);"><a href="#" style="background-color: maroon;">Home</a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Default.aspx">Home</a></li>
                     <li><a href="#about">Tickets</a></li>
-                    <li><a href="#">Cart</a></li>
+                    <li class="active" style="background-color: maroon;color: white;"><a href="#" style="background-color:maroon;">Cart</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->

@@ -8,6 +8,8 @@
     <link href="bootstrap.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
     <link href="custom.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -19,13 +21,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="color: white;">Hopewell Wine Tasting</a>
+                <a class="navbar-brand" href="#" style="color: white; font-family: 'Abril Fatface', cursive; font-size: 20px;">Hopewell Wine Tasting</a>
             </div>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div id="navbar" class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
                     <li class="active" style="background-color: rgb(96, 0, 22);"><a href="#" style="background-color: maroon;">Home</a></li>
                     <li><a href="#about">Tickets</a></li>
-                    <li><a href="#contact">Cart</a></li>
+                    <li><a href="cart.aspx">Cart</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -33,53 +35,164 @@
     </nav>
 
     <div class="container">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: auto; margin: 0 auto; max-height: 400px;">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-            </ol>
+        <!-- #region Jssor Slider Begin -->
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="img_chania.jpg" alt="Chania" />
-                </div>
+        <!-- Generator: Jssor Slider Maker -->
+        <!-- Source: http://www.jssor.com/demos/scrolling-logo-thumbnail-slider.slider -->
 
-                <div class="item">
-                    <img src="img_chania2.jpg" alt="Chania" />
-                </div>
+        <!-- This demo works without jquery library. -->
 
-                <div class="item">
-                    <img src="img_flower.jpg" alt="Flower" />
-                </div>
+        <script type="text/javascript" src="http://cdn.jssor.com/script/jssor.slider-21.1.5.min.js"></script>
+        <!-- use jssor.slider-21.1.5.debug.js instead for debug -->
+        <script>
+            jssor_1_slider_init = function () {
 
-                <div class="item">
-                    <img src="img_flower2.jpg" alt="Flower" />
-                </div>
+                var jssor_1_options = {
+                    $AutoPlay: true,
+                    $Idle: 0,
+                    $AutoPlaySteps: 4,
+                    $SlideDuration: 2500,
+                    $SlideEasing: $Jease$.$Linear,
+                    $PauseOnHover: 4,
+                    $SlideWidth: 170,
+                    $Cols: 5,
+                    $SlideSpacing: 10
+                };
+
+                var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+                //responsive code begin
+                //you can remove responsive code if you don't want the slider scales while window resizing
+                function ScaleSlider() {
+                    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                    if (refSize) {
+                        refSize = Math.min(refSize, 809);
+                        jssor_1_slider.$ScaleWidth(refSize);
+                    }
+                    else {
+                        window.setTimeout(ScaleSlider, 30);
+                    }
+                }
+                ScaleSlider();
+                $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                //responsive code end
+            };
+        </script>
+
+
+        <div id="scroller" style="width: 740px;height: 170px;background-color:maroon;margin:0 auto;overflow:visible;">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 15px; left: 0px; width: 780px; height: 150px; overflow: hidden; visibility: hidden;">
+            <!-- Loading Screen -->
+            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position: absolute; display: block; background: url('/theme/img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             </div>
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 780px; height: 150px; overflow: hidden;">
+                <div style="display: none;">
+                    <a href="http://www.jamesrivercellars.com/"><img data-u="image" src="winery/JamesRiver.jpg" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="bottles" src="img/bottles.jpg" />
+                </div>
+                <div style="display: none;">
+                    <a href="http://mattaponiwinery.com/"><img data-u="image" src="winery/MattaponiWinery.jpg" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="glasses" src="img/glasses.jpg" />
+                </div>
+                <div style="display: none;">
+                    <a href="http://elkislandwinery.com/"><img data-u="image" src="winery/ElkIsland.jpg" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="bottles2" src="img/bottles2.jpg" />
+                </div>
+                <div style="display: none;">
+                    <a href="http://westonfarmvineyardandwinery.webs.com/"><img data-u="image" src="winery/WestonFarm.gif" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="party" src="img/wineparty.jpg" />
+                </div>
+                <div style="display: none;">
+                    <a href="http://www.byrdcellars.com/"><img data-u="image" src="winery/ByrdCellars.jpg" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="outside" src="img/outside.jpg" />
+                </div>
+                <div style="display: none;">
+                    <a href="http://www.coopervineyards.com/"><img data-u="image" src="winery/CooperLogo.png" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="tasting" src="img/tasting.jpg" />
+                </div>
+                <a data-u="add" href="http://www.jssor.com/demos/scrolling-logo-thumbnail-slider.slider" style="display: none">Scrolling Logo Thumbnail Slider</a>
 
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            </div>
         </div>
+        </div>
+        <%--<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 780px; height: 150px; overflow: hidden; visibility: hidden;">
+            <!-- Loading Screen -->
+            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position: absolute; display: block; background: url('/theme/img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            </div>
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 780px; height: 150px; overflow: hidden;">
+                <div style="display: none;">
+                    <a href="http://www.jamesrivercellars.com/"><img data-u="image" src="winery/JamesRiver.jpg" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="bottles" src="img/bottles.jpg" />
+                </div>
+                <div style="display: none;">
+                    <a href="http://mattaponiwinery.com/"><img data-u="image" src="winery/MattaponiWinery.jpg" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="glasses" src="img/glasses.jpg" />
+                </div>
+                <div style="display: none;">
+                    <a href="http://elkislandwinery.com/"><img data-u="image" src="winery/ElkIsland.jpg" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="bottles2" src="img/bottles2.jpg" />
+                </div>
+                <div style="display: none;">
+                    <a href="http://westonfarmvineyardandwinery.webs.com/"><img data-u="image" src="winery/WestonFarm.gif" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="party" src="img/wineparty.jpg" />
+                </div>
+                <div style="display: none;">
+                    <a href="http://www.byrdcellars.com/"><img data-u="image" src="winery/ByrdCellars.jpg" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="outside" src="img/outside.jpg" />
+                </div>
+                <div style="display: none;">
+                    <a href="http://www.coopervineyards.com/"><img data-u="image" src="winery/CooperLogo.png" /></a>
+                </div>
+                <div style="display: none;">
+                    <img data-u="image" id="tasting" src="img/tasting.jpg" />
+                </div>
+                <a data-u="add" href="http://www.jssor.com/demos/scrolling-logo-thumbnail-slider.slider" style="display: none">Scrolling Logo Thumbnail Slider</a>
+
+            </div>
+        </div>--%>
+        <script>
+            jssor_1_slider_init();
+        </script>
         <br />
-        <div class="container">
+        <div class="container"><!-- Main content -->
             <div class="starter-template">
+                <a href="http://www.hopewellkiwanis.com">
+                    <img src="kiwanis.jpg" />
+                </a>
                 <h1 style="font-family: 'Pacifico', cursive;">Kiwanis Club Wine Tasting</h1>
-                <p class="lead">The Hopewell Kiwanis club invites you to its annual Wine Tasting Festival, November 19, 2016.</p>
+                <p class="lead">The Hopewell Kiwanis Club invites you to its annual Wine Tasting Festival, November 19, 2016.</p>
                 <div class="container">
                     <div class="col-lg-4 sellers" style="margin-left: 12.33333334%;">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><strong>Event Information</strong></div>
+                            <div class="panel-heading" style="background-color: rgb(96, 0, 26); color: white;"><strong>Event Information</strong></div>
                             <div class="panel-body" style="text-align: left;">
                                 <ul>
                                     <li>Where: The Beacon Theatre <a href="#">(Directions)</a>
@@ -96,7 +209,7 @@
                     </div>
                     <div class="col-lg-4 sellers">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><strong>Authorized Ticket Sellers</strong></div>
+                            <div class="panel-heading" style="background-color: rgb(96,0,26); color: white;"><strong>Authorized Ticket Sellers</strong></div>
                             <div class="panel-body" style="text-align: left;">
                                 <ul>
                                     <li>The Beacon Theatre
@@ -114,10 +227,46 @@
                         </div>
                     </div>
                 </div>
+                <div class="container">
+                    <div class="col-lg-8 sellers" style="margin-left: 12.3333334%;">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="background-color: rgb(96,0,26); color: white;"><strong>Where Do the Proceeds Go?</strong></div>
+                            <div class="panel-body" style="text-align: left;">
+                                <p>Proceeds go to the following Hopewell Kiwanis programs:</p>
+                                <ul>
+                                    <li>Hopewell and Prince George High School Key Clubs
+                                    </li>
+                                    <li>Terrific Kids Program at all three Hopewell Elementary Schools
+                                    </li>
+                                    <li>Three $1000 scholarships at Hopewell and/or Prince George High School
+                                    </li>
+                                    <li>Four Year roll-over Scholarship for one High School Senior Key Club Member
+                                    </li>
+                                    <li>Carter G. Woodson Middle School "Rewards" Store
+                                    </li>
+                                    <li>And more...
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <br />
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" style="">
+  <div class="modal-dialog" id="modaldialog">
+    <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+            <img data-u="image" id="modalimage" src="img/outside.jpg" />
+        </div>
+      </div>
+  </div>
+</div>
     <footer class="footer">
         <div class="container text-center" style="padding-top: 20px;">
             <p class="text-muted">
@@ -127,5 +276,6 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.js"></script>
+    <script src="custom.js"></script>
 </body>
 </html>
