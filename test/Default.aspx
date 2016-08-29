@@ -34,6 +34,7 @@
                     <li class="active" style="background-color: rgb(96, 0, 22);"><a href="#" style="background-color: maroon;">Home</a></li>
                     <li><a href="tickets.aspx">Tickets</a></li>
                     <li><a href="cart.aspx">Cart</a></li>
+                    <li><a href="gallery.aspx">Gallery</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->

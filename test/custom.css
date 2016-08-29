@@ -122,3 +122,8 @@
     width: 100%;
     clear: both;
 }
+@media (max-width: 1024px) {
+    .gallery {
+        padding-top: 20px;
+    }
+}

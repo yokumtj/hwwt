@@ -124,6 +124,7 @@
     <Content Include="bootstrap.js" />
     <Content Include="cart.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="gallery.aspx" />
     <Content Include="privacy.html" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
@@ -144,6 +145,13 @@
     </Compile>
     <Compile Include="Default.aspx.vb">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="gallery.aspx.designer.vb">
+      <DependentUpon>gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gallery.aspx.vb">
+      <DependentUpon>gallery.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />

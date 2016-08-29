@@ -28,3 +28,8 @@ $("#outside").click(function () {
     $("#modaldialog").width(630)
     $("#myModal").modal()
 });
+$("#testimg").click(function () {
+    $("#modalimage").attr("src", "img/2015/smiles.jpg")
+    $("#modaldialog").width(1200)
+    $("#myModal").modal()
+})

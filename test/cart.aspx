@@ -29,6 +29,7 @@
                     <li><a href="Default.aspx">Home</a></li>
                     <li><a href="tickets.aspx">Tickets</a></li>
                     <li class="active" style="background-color: maroon; color: white;"><a href="#" style="background-color: maroon;">Cart</a></li>
+                    <li><a href="gallery.aspx">Gallery</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
