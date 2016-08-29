@@ -38,7 +38,7 @@
         <div class="panel panel-default">
             <div class="panel-heading" style="background-color: rgb(96, 0, 26); color: white;">&ndash;Your Cart&ndash;</div>
             <div class="panel-body text-center">
-                <p>You have <strong><%= IIf(Session("tickets") Is Nothing, "0", Session("tickets")) %></strong> tickets in your cart.</p>
+                <p>You have <span id="totaltix"><%= IIf(Session("tickets") Is Nothing, "0", Session("tickets")) %></span> tickets in your cart.</p>
                 <p>If you would like to purchase these tickets, please fill out the form below, press "Buy Now," and you will be redirected to PayPal to securely enter your payment information.</p>
                 <div class="cartwrapper text-center" style="margin: 0 auto;">
                     <form method="get">
@@ -61,6 +61,7 @@
             </div>
         </div>
     </div>
+    <button class="btn btn-primary btn-lg" onclick="GetTickets()">Test</button>
     <footer class="footer">
         <div class="container text-center" style="padding-top: 20px;">
             <p class="text-muted">
@@ -70,5 +71,14 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.js"></script>
+    <script>
+        $('form[action*="paypal"]').submit(function (event) {
+            if ($('input[name="amount"]').val() != <%= Session("tickets") %> * 20) {
+                event.preventDefault();
+                alert('Fuck');
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>
