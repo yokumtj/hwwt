@@ -1,3 +1,4 @@
+var last = "Piss"
 $("#tasting").click(function () {
     $("#modalimage").attr("src", "img/tasting.jpg")
     $("#modaldialog").width( 510 )
@@ -28,8 +29,18 @@ $("#outside").click(function () {
     $("#modaldialog").width(630)
     $("#myModal").modal()
 });
-$("#testimg").click(function () {
-    $("#modalimage").attr("src", "img/2015/smiles.jpg")
-    $("#modaldialog").width(1200)
+$(".box").click(function (e) {
+    var source = $(this).attr("src")
+    var slash = source.lastIndexOf("/") + 1
+    var score = source.lastIndexOf("_")
+    $(this).removeClass("box")
+    $("#modalimage").attr("src", $(this).attr("src"))
+    $("#modaldialog").width(630)
     $("#myModal").modal()
-})
+    $(this).attr("id", "unboxed")
+    alert(source.substring(slash, score))
+});
+$("#myModal").on("hidden.bs.modal", function() {
+    $("#unboxed").addClass("box")
+    $("#unboxed").removeAttr("id")
+});

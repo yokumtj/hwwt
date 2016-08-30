@@ -44,80 +44,80 @@
     <div class="container-fluid" style="padding-top: 15px; padding-bottom: 15px;">
         <div class="row">
             <div class="col-lg-3 text-center">
-                <img src="img/2015/smiles_thumb.jpg" class="img-responsive gallery" id="testimg"/>
+                <img src="img/2015/thumbs/smiles_thumb.jpg" class="img-responsive gallery box" id="testimg"/>
             </div>
             <div class="col-lg-3 text-center">
-                <img src="img/2015/smiles2.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/smiles2_thumb.jpg" class="img-responsive gallery box"/>
             </div>
             <div class="col-lg-3 text-center">
-                <img src="img/2015/smiles3.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/smiles3_thumb.jpg" class="img-responsive gallery box"/>
             </div>
             <div class="col-lg-3 text-center">
-                <img src="img/2015/smiles4.jpg" class="img-responsive gallery" />
-            </div>
-        </div>
-        <div class="row" style="padding-top: 20px;">
-            <div class="col-lg-3 text-center">
-                <img src="img/2015/event.jpg" class="img-responsive gallery" />
-            </div>
-            <div class="col-lg-3 text-center">
-                <img src="img/2015/smiles5.jpg" class="img-responsive gallery" />
-            </div>
-            <div class="col-lg-3 text-center">
-                <img src="img/2015/socializing.jpg" class="img-responsive gallery" />
-            </div>
-            <div class="col-lg-3 text-center">
-                <img src="img/2015/photogenic2.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/smiles4_thumb.jpg" class="img-responsive gallery box"/>
             </div>
         </div>
         <div class="row" style="padding-top: 20px;">
             <div class="col-lg-3 text-center">
-                <img src="img/2015/james_river_cellars.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/event_thumb.jpg" class="img-responsive gallery box"/>
             </div>
             <div class="col-lg-3 text-center">
-                <img src="img/2015/men.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/smiles5_thumb.jpg" class="img-responsive gallery box" />
             </div>
             <div class="col-lg-3 text-center">
-                <img src="img/2015/jrc_2.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/socializing_thumb.jpg" class="img-responsive gallery box" />
             </div>
             <div class="col-lg-3 text-center">
-                <img src="img/2015/photogenic.jpg" class="img-responsive gallery" />
-            </div>
-        </div>
-        <div class="row" style="padding-top: 20px;">
-            <div class="col-lg-3 text-center">
-                <img src="img/2015/genuine.jpg" class="img-responsive gallery" />
-            </div>
-            <div class="col-lg-3 text-center">
-                <img src="img/2015/men2.jpg" class="img-responsive gallery" />
-            </div>
-            <div class="col-lg-3 text-center">
-                <img src="img/2015/women.jpg" class="img-responsive gallery" />
-            </div>
-            <div class="col-lg-3 text-center">
-                <img src="img/2015/weston_farm_smile.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/photogenic2_thumb.jpg" class="img-responsive gallery box" />
             </div>
         </div>
         <div class="row" style="padding-top: 20px;">
             <div class="col-lg-3 text-center">
-                <img src="img/2015/socializing2.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/james_river_cellars_thumb.jpg" class="img-responsive gallery box" />
             </div>
             <div class="col-lg-3 text-center">
-                <img src="img/2015/tasting2.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/men_thumb.jpg" class="img-responsive gallery box" />
             </div>
             <div class="col-lg-3 text-center">
-                <img src="img/2015/wine_dog.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/jrc_2_thumb.jpg" class="img-responsive gallery box" />
             </div>
             <div class="col-lg-3 text-center">
-                <img src="img/2015/socializing3.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/photogenic_thumb.jpg" class="img-responsive gallery box" />
+            </div>
+        </div>
+        <div class="row" style="padding-top: 20px;">
+            <div class="col-lg-3 text-center">
+                <img src="img/2015/thumbs/genuine_thumb.jpg" class="img-responsive gallery box" />
+            </div>
+            <div class="col-lg-3 text-center">
+                <img src="img/2015/thumbs/men2_thumb.jpg" class="img-responsive gallery box" />
+            </div>
+            <div class="col-lg-3 text-center">
+                <img src="img/2015/thumbs/women_thumb.jpg" class="img-responsive gallery box" />
+            </div>
+            <div class="col-lg-3 text-center">
+                <img src="img/2015/thumbs/weston_farm_smile_thumb.jpg" class="img-responsive gallery box" />
+            </div>
+        </div>
+        <div class="row" style="padding-top: 20px;">
+            <div class="col-lg-3 text-center">
+                <img src="img/2015/thumbs/socializing2_thumb.jpg" class="img-responsive gallery box" />
+            </div>
+            <div class="col-lg-3 text-center">
+                <img src="img/2015/thumbs/tasting2_thumb.jpg" class="img-responsive gallery box" />
+            </div>
+            <div class="col-lg-3 text-center">
+                <img src="img/2015/thumbs/wine_dog_thumb.jpg" class="img-responsive gallery box" />
+            </div>
+            <div class="col-lg-3 text-center">
+                <img src="img/2015/thumbs/socializing3_thumb.jpg" class="img-responsive gallery box" />
             </div>
         </div>
         <div class="row" style="padding-top: 20px;">
             <div class="col-lg-3 col-lg-offset-3 text-center">
-                <img src="img/2015/theatre.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/theatre_thumb.jpg" class="img-responsive gallery box" />
             </div>
             <div class="col-lg-3 text-center">
-                <img src="img/2015/screen.jpg" class="img-responsive gallery" />
+                <img src="img/2015/thumbs/screen_thumb.jpg" class="img-responsive gallery box" />
             </div>
         </div>
     </div>
@@ -127,7 +127,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body" style="background-color: rgb(96, 0, 26);">
-                    <img data-u="image" id="modalimage" src="img/2015/outside.jpg" />
+                    <img data-u="image" id="modalimage" src="img/2015/thumbs/outside_thumb.jpg" />
                 </div>
             </div>
         </div>
@@ -139,6 +139,15 @@
             </p>
         </div>
     </footer>
+    <script>
+        $(".gallery").mouseover(function () {
+            this.fadeTo(1, 1)
+            $(".gallery").fadeTo(315, .15)
+        });
+        $("#testimg").mouseover(function () {
+            $("#testimg").fadeTo(315, .15)
+        });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.js"></script>
     <script src="custom.js"></script>
