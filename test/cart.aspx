@@ -50,14 +50,14 @@
                         <label for="last">Last Name:</label>
                         <input type="text" name="last" id="last" />
                     </form>
-                    <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
-                        <input type="hidden" name="cmd" value="_xclick" />
-                        <input type="hidden" name="business" value="kartracer44@gmail.com" />
-                        <input type="hidden" name="item_name" value="Kiwanis Wine Tasting Ticket(<%= Session("tickets") %>)" />
-                        <input type="hidden" name="currency_code" value="USD" />
-                        <input type="hidden" name="amount" value="<%= Session("tickets") * 20 %>" />
-                        <input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" style="transform: scale(0.5, 0.5);" />
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick" />
+                        <input type="hidden" name="hosted_button_id" value="6EUVAA7U28FVU" />
+                        <input type="hidden" name="quantity" value="<%= Session("tickets") %>" />
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
                     </form>
+
                 </div>
             </div>
         </div>
@@ -73,13 +73,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.js"></script>
     <script>
-        $('form[action*="paypal"]').submit(function (event) {
+        <%--$('form[action*="paypal"]').submit(function (event) {
             if ($('input[name="amount"]').val() != <%= Session("tickets") %> * 20) {
                 event.preventDefault();
                 alert('Fuck');
                 return false;
             }
-        });
+        });--%>
     </script>
 </body>
 </html>

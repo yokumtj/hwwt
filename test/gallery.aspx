@@ -84,7 +84,7 @@
                 <img src="img/2015/thumbs/photogenic_thumb.jpg" class="img-responsive gallery box" />
             </div>
         </div>
-        <div class="row" style="padding-top: 20px;">
+        <div class="row slideanim" style="padding-top: 20px;">
             <div class="col-lg-3 text-center">
                 <img src="img/2015/thumbs/genuine_thumb.jpg" class="img-responsive gallery box" />
             </div>
@@ -98,7 +98,7 @@
                 <img src="img/2015/thumbs/weston_farm_smile_thumb.jpg" class="img-responsive gallery box" />
             </div>
         </div>
-        <div class="row" style="padding-top: 20px;">
+        <div class="row slideanim" style="padding-top: 20px;">
             <div class="col-lg-3 text-center">
                 <img src="img/2015/thumbs/socializing2_thumb.jpg" class="img-responsive gallery box" />
             </div>
@@ -112,7 +112,7 @@
                 <img src="img/2015/thumbs/socializing3_thumb.jpg" class="img-responsive gallery box" />
             </div>
         </div>
-        <div class="row" style="padding-top: 20px;">
+        <div class="row slideanim" style="padding-top: 20px;">
             <div class="col-lg-3 col-lg-offset-3 text-center">
                 <img src="img/2015/thumbs/theatre_thumb.jpg" class="img-responsive gallery box" />
             </div>

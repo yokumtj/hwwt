@@ -33,14 +33,24 @@ $(".box").click(function (e) {
     var source = $(this).attr("src")
     var slash = source.lastIndexOf("/") + 1
     var score = source.lastIndexOf("_")
+    var newsrc = "img/2015/resize/" + source.substring(slash, score) + "_resize.jpg"
     $(this).removeClass("box")
-    $("#modalimage").attr("src", $(this).attr("src"))
-    $("#modaldialog").width(630)
+    $("#modalimage").attr("src", newsrc)
+    $("#modaldialog").width(1054)
     $("#myModal").modal()
     $(this).attr("id", "unboxed")
-    alert(source.substring(slash, score))
 });
 $("#myModal").on("hidden.bs.modal", function() {
     $("#unboxed").addClass("box")
     $("#unboxed").removeAttr("id")
+});
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 800) {
+      $(this).addClass("slide");
+    }
+  });
 });
