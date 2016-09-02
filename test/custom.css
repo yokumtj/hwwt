@@ -40,7 +40,7 @@
 
         @media (max-width: 1200px) {
             .sellers {
-                margin-left: 10.3333334% !important;
+                margin-left: 24.3333334% !important;
                 margin-right: 30.333334%;
             }
             .sellers > .panel {
@@ -53,7 +53,11 @@
                 top: -9px;
             }
         }
-
+        @media (device-width: 1024px) {
+            .sellers > .panel {
+                margin: 0 auto;
+            }
+        }
         #myCarousel img {
             max-height: 400px;
             width: auto;
@@ -106,9 +110,10 @@
 }
 
 @media (max-width: 767px) {
-  .fullscreen-bg {
-    background: url('../img/videoframe.jpg') center center / cover no-repeat;
-  }
+  /*.fullscreen-bg {
+    background: url('grapes.jpg') center center / cover no-repeat;
+    opacity: .4;
+  }*/
 
   .fullscreen-bg__video {
     display: none;

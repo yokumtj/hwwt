@@ -11,5 +11,5 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class tickets
+Partial Public Class cart
 End Class

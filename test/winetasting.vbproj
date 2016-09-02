@@ -122,22 +122,24 @@
   <ItemGroup>
     <Content Include="bootstrap.css" />
     <Content Include="bootstrap.js" />
-    <Content Include="cart.aspx" />
+    <Content Include="tickets.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="gallery.aspx" />
     <Content Include="privacy.html" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="success.aspx" />
     <Content Include="terms.html" />
-    <Content Include="tickets.aspx" />
+    <Content Include="test.html" />
+    <Content Include="tickets.gif" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cart.aspx.designer.vb">
-      <DependentUpon>cart.aspx</DependentUpon>
+    <Compile Include="tickets.aspx.designer.vb">
+      <DependentUpon>tickets.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cart.aspx.vb">
-      <DependentUpon>cart.aspx</DependentUpon>
+    <Compile Include="tickets.aspx.vb">
+      <DependentUpon>tickets.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.vb">
@@ -173,11 +175,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="tickets.aspx.designer.vb">
-      <DependentUpon>tickets.aspx</DependentUpon>
+    <Compile Include="success.aspx.designer.vb">
+      <DependentUpon>success.aspx</DependentUpon>
     </Compile>
-    <Compile Include="tickets.aspx.vb">
-      <DependentUpon>tickets.aspx</DependentUpon>
+    <Compile Include="success.aspx.vb">
+      <DependentUpon>success.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

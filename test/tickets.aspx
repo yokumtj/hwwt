@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="tickets.aspx.vb" Inherits="test.tickets" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="tickets.aspx.vb" Inherits="test.cart" %>
 
 <!DOCTYPE html>
 
@@ -22,51 +22,50 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="Default.aspx" style="color: white;font-family: 'Dancing Script', cursive; font-size: 28px;">Hopewell Wine Tasting</a>
+                <a class="navbar-brand" href="Default.aspx" style="color: white; font-family: 'Dancing Script', cursive; font-size: 28px;">Hopewell Wine Tasting</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="Default.aspx">Home</a></li>
-                    <li class="active"><a href="#about" style="background-color: maroon;color: white;">Tickets</a></li>
-                    <li><a href="cart.aspx">Cart</a></li>
+                    <li class="active" style="background-color: maroon; color: white;"><a href="#" style="background-color: maroon;">Tickets</a></li>
                     <li><a href="gallery.aspx">Gallery</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
     </nav>
-    <div class="col-lg-5 text-center" id="privacy" style="margin:0 auto;float:none;">
+    <div class="col-lg-5 text-center" id="privacy" style="margin: 0 auto; float: none;">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: rgb(96, 0, 26); color:white;">&ndash;Tickets&ndash;</div>
+            <div class="panel-heading" style="background-color: rgb(96, 0, 26); color: white;">&ndash;Tickets&ndash;</div>
             <div class="panel-body text-center">
-                    <img src="tickets.gif" style="transform: scale(0.75, 0.75);"/>
-                <br />
-                <form action="cart.aspx" method="post">
-                    <label for="tix">How many tickets would you like to purchase?</label>
-                    <select name="tix" id="tix">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                </select>
-                <input type="submit" value="Add to cart" class="btn btn-primary btn-sm" style="background-color: maroon;border:none;"/>
-                </form>
+                <img src="tickets.gif" style="transform: scale(0.75, 0.75);position:unset;"/>
+                <p>
+                    If you would like to purchase tickets, please fill out the form below, choose how many tickets you would like and press "Buy Now." 
+                    You will then be redirected to PayPal's secure payment page to enter your information.
+                </p>
+                <div class="cartwrapper text-center" style="margin: 0 auto;">
+                    <form method="get">
+                        <label for="email">Email Address:</label>
+                        <input type="text" name="email" id="email" /><br />
+                        <label for="first">First Name:</label>
+                        <input type="text" name="first" id="first" /><br />
+                        <label for="last">Last Name:</label>
+                        <input type="text" name="last" id="last" />
+                    </form><br />
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_s-xclick" />
+                        <input type="hidden" name="hosted_button_id" value="6EUVAA7U28FVU" />
+                        <select name="quantity" style="font-weight: bold;">
+                            <option value="0" id="quant">Select your quantity here</option>
+                            <% For x = 1 To 20 %>
+                            <option value="<%=x.ToString  %>"><%=x.ToString  %></option>
+                            <% Next  %>
+                        </select><br /><br />
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
+
+                </div>
             </div>
         </div>
     </div>
@@ -79,5 +78,14 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.js"></script>
+    <script>
+        <%--$('form[action*="paypal"]').submit(function (event) {
+            if ($('input[name="amount"]').val() != <%= Session("tickets") %> * 20) {
+                event.preventDefault();
+                alert('Fuck');
+                return false;
+            }
+        });--%>
+    </script>
 </body>
 </html>

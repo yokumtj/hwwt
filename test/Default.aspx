@@ -13,11 +13,15 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" />
 </head>
 <body>
+    <%If Not Request.Browser.IsMobileDevice%>
     <div class="fullscreen-bg">
-    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
-        <source src="pour2.webm" type="video/webm" />
-    </video>
-</div>
+        <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+            <source src="pour2.webm" type="video/webm" />
+        </video>
+    </div>
+    <%Else %>
+    <div class="fullscreen-bg"></div>
+    <%End If %>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -33,7 +37,6 @@
                 <ul class="nav navbar-nav">
                     <li class="active" style="background-color: rgb(96, 0, 22);"><a href="#" style="background-color: maroon;">Home</a></li>
                     <li><a href="tickets.aspx">Tickets</a></li>
-                    <li><a href="cart.aspx">Cart</a></li>
                     <li><a href="gallery.aspx">Gallery</a></li>
                 </ul>
             </div>
@@ -89,63 +92,70 @@
         </script>
 
 
-        <div id="scroller" style="width: 800px;height: 170px;background-color:maroon;margin:0 auto;overflow:visible;">
+        <div id="scroller" style="width: 800px; height: 170px; background-color: maroon; margin: 0 auto; overflow: visible;">
             <div id="jssor_1" style="position: relative; margin: 0 auto; top: 10px; left: 0px; width: 780px; height: 150px; overflow: hidden; visibility: hidden;">
-            <!-- Loading Screen -->
-            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                <div style="position: absolute; display: block; background: url('/theme/img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-            </div>
-            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 780px; height: 150px; overflow: hidden;">
-                <div style="display: none;">
-                    <a href="http://www.jamesrivercellars.com/"><img data-u="image" src="winery/JamesRiver.jpg" /></a>
+                <!-- Loading Screen -->
+                <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                    <div style="position: absolute; display: block; background: url('/theme/img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                 </div>
-                <div style="display: none;">
-                    <img data-u="image" id="bottles" src="img/bottles.jpg" />
-                </div>
-                <div style="display: none;">
-                    <a href="http://mattaponiwinery.com/"><img data-u="image" src="winery/MattaponiWinery.jpg" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="glasses" src="img/glasses.jpg" />
-                </div>
-                <div style="display: none;">
-                    <a href="http://elkislandwinery.com/"><img data-u="image" src="winery/ElkIsland.jpg" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="bottles2" src="img/bottles2.jpg" />
-                </div>
-                <div style="display: none;">
-                    <a href="http://westonfarmvineyardandwinery.webs.com/"><img data-u="image" src="winery/WestonFarm.gif" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="party" src="img/wineparty.jpg" />
-                </div>
-                <div style="display: none;">
-                    <a href="http://www.byrdcellars.com/"><img data-u="image" src="winery/ByrdCellars.jpg" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="outside" src="img/outside.jpg" />
-                </div>
-                <div style="display: none;">
-                    <a href="http://www.coopervineyards.com/"><img data-u="image" src="winery/CooperLogo.png" /></a>
-                </div>
-                <div style="display: none;">
-                    <img data-u="image" id="tasting" src="img/tasting.jpg" />
-                </div>
-                <a data-u="add" href="http://www.jssor.com/demos/scrolling-logo-thumbnail-slider.slider" style="display: none">Scrolling Logo Thumbnail Slider</a>
+                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 780px; height: 150px; overflow: hidden;">
+                    <div style="display: none;">
+                        <a href="http://www.jamesrivercellars.com/" target="_blank">
+                            <img data-u="image" src="winery/JamesRiver.jpg" /></a>
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" id="bottles" src="img/bottles.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <a href="http://mattaponiwinery.com/" target="_blank">
+                            <img data-u="image" src="winery/MattaponiWinery.jpg" /></a>
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" id="glasses" src="img/glasses.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <a href="http://elkislandwinery.com/" target="_blank">
+                            <img data-u="image" src="winery/ElkIsland.jpg" /></a>
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" id="bottles2" src="img/bottles2.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <a href="http://westonfarmvineyardandwinery.webs.com/" target="_blank">
+                            <img data-u="image" src="winery/WestonFarm.gif" /></a>
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" id="party" src="img/wineparty.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <a href="http://www.byrdcellars.com/" target="_blank">
+                            <img data-u="image" src="winery/ByrdCellars.jpg" /></a>
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" id="outside" src="img/outside.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <a href="http://www.coopervineyards.com/" target="_blank">
+                            <img data-u="image" src="winery/CooperLogo.png" /></a>
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" id="tasting" src="img/tasting.jpg" />
+                    </div>
+                    <a data-u="add" href="http://www.jssor.com/demos/scrolling-logo-thumbnail-slider.slider" style="display: none">Scrolling Logo Thumbnail Slider</a>
 
+                </div>
             </div>
-        </div>
         </div>
         <script>
             jssor_1_slider_init();
         </script>
         <br />
-        <div class="container"><!-- Main content -->
+        <div class="container">
+            <!-- Main content -->
             <div class="starter-template">
                 <a href="http://www.hopewellkiwanis.com">
-                    <img src="kiwanis.png" style="width:274px;height:184px;"/>
+                    <img src="kiwanis.png" style="width: 274px; height: 184px;" />
                 </a>
                 <h1 style="font-family: 'Pacifico', cursive;">Kiwanis Club Wine Tasting</h1>
                 <p class="lead">The Hopewell Kiwanis Club invites you to its annual Wine Tasting Festival, November 19, 2016.</p>
@@ -155,11 +165,11 @@
                             <div class="panel-heading" style="background-color: rgb(96, 0, 26); color: white;"><strong>Event Information</strong></div>
                             <div class="panel-body" style="text-align: left;">
                                 <ul>
-                                    <li>Where: The Beacon Theatre <a href="#">(Directions)</a>
+                                    <li>Where: The Beacon Theatre <a href="goo.gl/HUWSWt">(Directions)</a>
                                     </li>
-                                    <li>When: 12-6PM, November 21st, 2016
+                                    <li>When: 12-6PM, November 19th, 2016
                                     </li>
-                                    <li>Tickets: <strong>$20</strong> in advance <a href="#">(order)</a>, <strong>$25</strong> at the door
+                                    <li>Tickets: <strong>$20</strong> in advance <a href="tickets.aspx">(order)</a>, <strong>$25</strong> at the door
                                     </li>
                                     <li>Phone: (804) 571-1711
                                     </li>
@@ -215,17 +225,17 @@
         </div>
     </div>
     <br />
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog" style="">
-  <div class="modal-dialog" id="modaldialog">
-    <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-body" style="background-color: rgb(96, 0, 26);">
-            <img data-u="image" id="modalimage" src="img/outside.jpg" />
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog" style="">
+        <div class="modal-dialog" id="modaldialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body" style="background-color: rgb(96, 0, 26);">
+                    <img data-u="image" id="modalimage" src="img/outside.jpg" />
+                </div>
+            </div>
         </div>
-      </div>
-  </div>
-</div>
+    </div>
     <footer class="footer">
         <div class="container text-center" style="padding-top: 20px;">
             <p class="text-muted">

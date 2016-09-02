@@ -19,6 +19,11 @@
             }
         }
     </style>
+    <%If Request.Browser.IsMobileDevice %>
+        <script>
+            noSlide();
+        </script>
+    <%End If %>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -28,13 +33,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="color: white; font-family: 'Dancing Script', cursive; font-size: 28px;">Hopewell Wine Tasting</a>
+                <a class="navbar-brand" href="Default.aspx" style="color: white; font-family: 'Dancing Script', cursive; font-size: 28px;">Hopewell Wine Tasting</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
                     <li><a href="Default.aspx">Home</a></li>
                     <li><a href="tickets.aspx">Tickets</a></li>
-                    <li><a href="cart.aspx">Cart</a></li>
                     <li class="active"><a href="#" style="background-color: maroon; color: white;">Gallery</a></li>
                 </ul>
             </div>
@@ -139,15 +143,6 @@
             </p>
         </div>
     </footer>
-    <script>
-        $(".gallery").mouseover(function () {
-            this.fadeTo(1, 1)
-            $(".gallery").fadeTo(315, .15)
-        });
-        $("#testimg").mouseover(function () {
-            $("#testimg").fadeTo(315, .15)
-        });
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.js"></script>
     <script src="custom.js"></script>

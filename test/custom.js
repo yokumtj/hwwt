@@ -54,3 +54,8 @@ $(window).scroll(function() {
     }
   });
 });
+function noSlide() {
+    $(".slideanim").each(function() {
+        $(this).removeClass("slideanim")
+    })
+}
