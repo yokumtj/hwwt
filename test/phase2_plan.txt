@@ -1,0 +1,56 @@
+Phase 1 is ready to go, the website is working and the amount per ticket is unable to be changed by the user. Payments can be received and the PayPal button is set up correctly. The mobile logo is working as intended and only appears when on a mobile device, via Request.Browser.IsMobileDevice.
+
+Phase 2 will entail everything below, and therefore, requires a database for me to start. I will first deal with entering the customers' info after a purchase is successfully verified via any of the methods below, and then will deal with extracting pictures from the server (via paths in database). The latter will involve implementing a login system that allows users to enter pictures that they want - have to check out session variables and authentication. Maybe Kaleb's way? Maybe just ask and see what way Jeff says?
+
+----------------------------------------------------------------------------------------------------------
+
+This is code that we can use to determine whether or not we are still selling the tickets on that date or not. Need to decide exactly what message will change on the front page and what exactly it will look like after everything. I would imagine that panels still stay with information on them; maybe the ticket sellers panel would go away, but what about the sponsors/pictures slider? Should I change and use pictures from last year in the slider now?
+
+If DateTime.Now.Month > 11 Or DateTime.Now.Year = 2017 Then ' condition for December onward
+    diffFrontPage;
+ElseIf DateTime.Now.Month = 11 And DateTime.Now.Day > 19 Then ' condition for the month of November past the 19th
+    diffFrontPage;
+ElseIf DateTime.Now.Month = 11 And DateTime.Now.Day >= 19 And DateTime.Now.Hour >= 12 Then ' condition for November 19th past 12PM
+    diffFrontPage;
+End If
+----------------------------------------------------------------------------------------------------------
+
+What we will log into the database (cols):
+
+- cust_email
+- cust_fname
+- cust_lname
+- tix_purchased
+- purchase_date
+
+Methodology for doing this, multiple ways:
+
+
+1. With IPN or PDT (best option, IMO)
+    A. Customer starts a transaction, finished
+    B. Customer is sent to the IPN listener page (success.aspx) upon successful transaction
+    C. IPN listener page sends back the information to PayPal to check validity
+    D. Validity:
+        d. Good: log 5 fields above into the database
+        d. No good: cross that bridge when we get to it
+    E. Fin
+
+2. With Session variables and pre-page validation
+    A. Customer starts a transaction
+    B. Customer enters in all variables into form on Tickets.aspx (fname, lname, email, quantity)
+    C. This variables are preserved in the Session
+    D. Customer initiates PayPal transaction.
+        d. Finished + paid: success.aspx
+        d. Canceled + unpaid: cancel.aspx
+    E. On Page_Load at success.aspx, validate that Me.Request.UrlReferrer is indeed PayPal (or some other, better way of checking if previous page is what we want)
+    F. If it is PayPal, enter the stored Session variables into the database (after some validation)
+
+3. With PayPal History every day
+    A. Site is up for several days
+    B. Each day after step A, download PayPal history
+    C. Look for new names, emails, payments
+    D. Figure the number of tickets purchased for each order.
+    E. Manually add to the database
+
+Method 2 may induce some trouble when it comes to mobile browsing sessions, though I'm unsure. We would have to test.
+Method 3 is the most time consuming and certain things will most definitely be lost in translation for those who do not put their first/last name/correct email into the PayPal form.

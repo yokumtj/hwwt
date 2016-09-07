@@ -31,7 +31,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="color: white; font-family: 'Dancing Script', cursive; font-size: 28px;">Hopewell Wine Tasting</a>
+                <a class="navbar-brand" href="#">Hopewell Wine Tasting</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
@@ -155,19 +155,19 @@
             <!-- Main content -->
             <div class="starter-template">
                 <a href="http://www.hopewellkiwanis.com">
-                    <img src="kiwanis.png" style="width: 274px; height: 184px;" />
+                    <img src="<%= Interaction.IIf(Request.Browser.IsMobileDevice, "kiwanis_grapes2.png", "kiwanis.png") %>" style="width: 274px; height: 184px;" />
                 </a>
                 <h1 style="font-family: 'Pacifico', cursive;">Kiwanis Club Wine Tasting</h1>
-                <p class="lead">The Hopewell Kiwanis Club invites you to its annual Wine Tasting Festival, November 19, 2016.</p>
+                <p class="lead">The Hopewell Kiwanis Club invites you to its annual Wine Tasting Festival, November 19<sup>th</sup>, 2016.</p>
                 <div class="container">
                     <div class="col-lg-4 sellers" style="margin-left: 12.33333334%;">
                         <div class="panel panel-default">
-                            <div class="panel-heading" style="background-color: rgb(96, 0, 26); color: white;"><strong>Event Information</strong></div>
+                            <div class="panel-heading paneltop"><strong>Event Information</strong></div>
                             <div class="panel-body" style="text-align: left;">
                                 <ul>
-                                    <li>Where: The Beacon Theatre <a href="goo.gl/HUWSWt">(Directions)</a>
+                                    <li>Where: The Beacon Theatre <a href="http://goo.gl/HUWSWt">(Directions)</a>
                                     </li>
-                                    <li>When: 12-6PM, November 19th, 2016
+                                    <li>When: 12-6PM, November 19<sup>th</sup>, 2016
                                     </li>
                                     <li>Tickets: <strong>$20</strong> in advance <a href="tickets.aspx">(order)</a>, <strong>$25</strong> at the door
                                     </li>
@@ -179,7 +179,7 @@
                     </div>
                     <div class="col-lg-4 sellers">
                         <div class="panel panel-default">
-                            <div class="panel-heading" style="background-color: rgb(96,0,26); color: white;"><strong>Authorized Ticket Sellers</strong></div>
+                            <div class="panel-heading paneltop"><strong>Authorized Ticket Sellers</strong></div>
                             <div class="panel-body" style="text-align: left;">
                                 <ul>
                                     <li>The Beacon Theatre
@@ -200,7 +200,7 @@
                 <div class="container">
                     <div class="col-lg-8 sellers" style="margin-left: 12.3333334%;">
                         <div class="panel panel-default">
-                            <div class="panel-heading" style="background-color: rgb(96,0,26); color: white;"><strong>Where Do the Proceeds Go?</strong></div>
+                            <div class="panel-heading paneltop"><strong>Where Do the Proceeds Go?</strong></div>
                             <div class="panel-body" style="text-align: left;">
                                 <p>Proceeds go to the following Hopewell Kiwanis programs:</p>
                                 <ul>

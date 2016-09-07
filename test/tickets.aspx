@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="Default.aspx" style="color: white; font-family: 'Dancing Script', cursive; font-size: 28px;">Hopewell Wine Tasting</a>
+                <a class="navbar-brand" href="Default.aspx">Hopewell Wine Tasting</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -36,7 +36,7 @@
     </nav>
     <div class="col-lg-5 text-center" id="privacy" style="margin: 0 auto; float: none;">
         <div class="panel panel-default">
-            <div class="panel-heading" style="background-color: rgb(96, 0, 26); color: white;">&ndash;Tickets&ndash;</div>
+            <div class="panel-heading paneltop">&ndash;Tickets&ndash;</div>
             <div class="panel-body text-center">
                 <img src="tickets.gif" style="transform: scale(0.75, 0.75);position:unset;"/>
                 <p>
