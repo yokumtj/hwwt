@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 </head>
 <body>
     <%If Not Request.Browser.IsMobileDevice%>
@@ -158,47 +159,51 @@
                     <img src="<%= Interaction.IIf(Request.Browser.IsMobileDevice, "kiwanis_grapes2.png", "kiwanis.png") %>" style="width: 274px; height: 184px;" />
                 </a>
                 <h1 style="font-family: 'Pacifico', cursive;">Kiwanis Club Wine Tasting</h1>
-                <p class="lead">The Hopewell Kiwanis Club invites you to its annual Wine Tasting Festival, November 19<sup>th</sup>, 2016.</p>
+                <p class="lead">
+                    <%= greeting() %>
+                </p>
                 <div class="container">
-                    <div class="col-lg-4 sellers" style="margin-left: 12.33333334%;">
-                        <div class="panel panel-default">
-                            <div class="panel-heading paneltop"><strong>Event Information</strong></div>
-                            <div class="panel-body" style="text-align: left;">
-                                <ul>
-                                    <li>Where: The Beacon Theatre <a href="http://goo.gl/HUWSWt">(Directions)</a>
-                                    </li>
-                                    <li>When: 12-6PM, November 19<sup>th</sup>, 2016
-                                    </li>
-                                    <li>Tickets: <strong>$20</strong> in advance <a href="tickets.aspx">(order)</a>, <strong>$25</strong> at the door
-                                    </li>
-                                    <li>Phone: (804) 571-1711
-                                    </li>
-                                </ul>
+                    <div class="row" style="margin: 0 auto;">
+                        <div class="col-sm-4 custom-offset sellers">
+                            <div class="panel panel-default">
+                                <div class="panel-heading paneltop"><strong>Event Information</strong></div>
+                                <div class="panel-body" style="text-align: left;">
+                                    <ul>
+                                        <li>Where: The Beacon Theatre <a href="http://goo.gl/HUWSWt">(Directions)</a>
+                                        </li>
+                                        <li>When: 12-6PM, November 19<sup>th</sup>, 2016
+                                        </li>
+                                        <li>Tickets: <strong>$20</strong> in advance <a href="tickets.aspx">(order)</a>, <strong>$25</strong> at the door
+                                        </li>
+                                        <li>Phone: (804) 571-1711
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 sellers">
-                        <div class="panel panel-default">
-                            <div class="panel-heading paneltop"><strong>Authorized Ticket Sellers</strong></div>
-                            <div class="panel-body" style="text-align: left;">
-                                <ul>
-                                    <li>The Beacon Theatre
-                                    </li>
-                                    <li>Vergara's Cleaner
-                                    </li>
-                                    <li>Commonwealth Technology Group
-                                    </li>
-                                    <li>Vigilant Storage
-                                    </li>
-                                    <li>Ford Agency
-                                    </li>
-                                </ul>
+                        <div class="col-sm-4 sellers">
+                            <div class="panel panel-default">
+                                <div class="panel-heading paneltop"><strong>Authorized Ticket Sellers</strong></div>
+                                <div class="panel-body" style="text-align: left;">
+                                    <ul>
+                                        <li>The Beacon Theatre
+                                        </li>
+                                        <li>Vergara's Cleaner
+                                        </li>
+                                        <li>Commonwealth Technology Group
+                                        </li>
+                                        <li>Vigilant Storage
+                                        </li>
+                                        <li>Ford Agency
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="container">
-                    <div class="col-lg-8 sellers" style="margin-left: 12.3333334%;">
+                    <div class="col-sm-8 custom-offset sellers">
                         <div class="panel panel-default">
                             <div class="panel-heading paneltop"><strong>Where Do the Proceeds Go?</strong></div>
                             <div class="panel-body" style="text-align: left;">
@@ -240,6 +245,7 @@
         <div class="container text-center" style="padding-top: 20px;">
             <p class="text-muted">
                 Copyright <%= Date.Today.Year %> by Commonwealth Technology Group &bull; <a href="privacy.html">Privacy Statement</a> &bull; <a href="terms.html">Terms of Use</a>
+                &bull; <%= Visitors %> users have visited this site!
             </p>
         </div>
     </footer>

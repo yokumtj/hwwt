@@ -39,12 +39,6 @@
         }
 
         @media (max-width: 1200px) {
-            .sellers {
-                margin-left: 28.3333334% !important;
-            }
-            .sellers > .panel {
-                width: 250px;
-            }
         }
         @media (max-width: 1200px) {
             #scroller {
@@ -110,9 +104,6 @@
     background: url('grapes.jpg') center center / cover no-repeat;
     opacity: .4;
   }*/
-  .sellers {
-                margin-left: 28.3333334% !important;
-            }
   .fullscreen-bg__video {
     display: none;
   }
@@ -134,7 +125,7 @@
 /* The fast way */
 .box {
   position: relative;
-  z-index: 1000;
+  z-index: 1;
   display: block;
   border-radius: 5px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -161,7 +152,7 @@
 .box:hover {
   -webkit-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
-  z-index: 1000000;
+  z-index: 1;
   box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.4);
 }
 
@@ -209,4 +200,9 @@
     color: white !important;
     font-family: 'Dancing Script', cursive !important;
     font-size: 28px !important;
+}
+@media (min-width: 1440px) {
+    .custom-offset {
+    margin-left: 12.666666666%;
+}
 }
